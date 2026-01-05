@@ -1,3 +1,3 @@
-module example.com/main
+module go-levenshtein
 
 go 1.25.5
