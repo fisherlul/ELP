@@ -1,5 +1,7 @@
 package main
 
+import "go-levenshtein/internal/server"
+
 func main() {
-	server.startServer(":9000")
+	server.Start(":9000")
 }
