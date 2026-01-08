@@ -1,9 +1,8 @@
 package worker
 
 import (
-	"sync"
-
 	"ELP/internal/levenshtein"
+	"sync"
 )
 
 type Pool struct {

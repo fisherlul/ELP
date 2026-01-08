@@ -1,12 +1,11 @@
 package main
 
 import (
+	"ELP/internal/protocol"
 	"bufio"
 	"encoding/json"
 	"fmt"
 	"net"
-
-	"ELP/internal/protocol"
 )
 
 func main() {

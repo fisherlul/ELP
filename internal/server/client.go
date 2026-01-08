@@ -1,14 +1,12 @@
 package server
 
 import (
+	"ELP/internal/protocol"
+	"ELP/internal/worker"
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"go-levenshtein/internal/protocol"
 	"net"
-
-	"ELP/internal/protocol"
-	"ELP/internal/worker"
 )
 
 func handleClient(conn net.Conn) {
