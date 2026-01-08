@@ -1,4 +1,4 @@
-module go-levenshtein
+module ELP
 
 go 1.25.5
 

@@ -6,17 +6,17 @@ import (
 )
 
 func Start(addr string) {
-	ln, err := net.Listen("tcp", addr) // create server listening on addr
+	ln, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Println("Server listening on", addr)
+	log.Println("Listening on", addr)
 
-	for { // accept incoming client connections, concurrently handle each client
+	for {
 		conn, err := ln.Accept()
 		if err != nil {
 			continue
-		}  
+		}
 		go handleClient(conn)
 	}
 }

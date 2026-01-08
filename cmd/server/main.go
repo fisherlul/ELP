@@ -1,6 +1,6 @@
 package main
 
-import "go-levenshtein/internal/server"
+import "ELP/internal/server"
 
 func main() {
 	server.Start(":9000")

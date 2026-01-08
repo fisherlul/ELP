@@ -10,7 +10,3 @@ type Result struct {
 	B        string
 	Distance int
 }
-
-type Worker interface {
-	Compute(job Job) Result
-}
