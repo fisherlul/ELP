@@ -1,0 +1,83 @@
+=== FLIP 7 GAME LOG ===
+Starting Flip 7
+
+=== ROUND 1 ===
+
+hhung numbers: none
+hhung draws: +5
+
+hanzi numbers: none
+hanzi draws: Number 6
+
+hhung numbers: none
+hhung draws: Number 12
+
+hanzi numbers: 6
+hanzi draws: FREEZE
+hanzi is FROZEN
+
+hhung numbers: 12
+hhung draws: Number 10
+
+hhung numbers: 12, 10
+hhung draws: Number 11
+
+hhung numbers: 12, 10, 11
+hhung draws: Number 12
+hhung ELIMINATED (duplicate 12)
+hhung scores 0 (eliminated this round)
+hanzi scores 0 (eliminated this round)
+
+=== ROUND 2 ===
+
+hhung numbers: none
+hhung draws: Number 11
+
+hanzi numbers: none
+hanzi draws: +4
+
+hhung numbers: 11
+hhung draws: Number 7
+
+hanzi numbers: none
+hanzi draws: Number 8
+
+hhung numbers: 11, 7
+hhung draws: Number 7
+hhung ELIMINATED (duplicate 7)
+
+hanzi numbers: 8
+hanzi draws: Number 11
+
+hanzi numbers: 8, 11
+hanzi draws: Number 8
+hanzi ELIMINATED (duplicate 8)
+hhung scores 0 (eliminated this round)
+hanzi scores 0 (eliminated this round)
+
+=== ROUND 3 ===
+
+hhung numbers: none
+hhung draws: Number 7
+
+hanzi numbers: none
+hanzi draws: Number 9
+
+hhung numbers: 7
+hhung draws: Number 2
+
+hanzi numbers: 9
+hanzi draws: FLIP_THREE
+hanzi must draw THREE cards
+hanzi draws: Number 10
+hanzi draws: Number 10
+hanzi ELIMINATED (duplicate 10)
+
+hhung numbers: 7, 2
+hhung STAYS
+hhung scores 9 → TOTAL 9
+hanzi scores 0 (eliminated this round)
+
+=== ROUND 4 ===
+
+hhung numbers: none
