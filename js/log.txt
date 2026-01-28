@@ -1,0 +1,40 @@
+=== FLIP 7 GAME LOG ===
+Starting Flip 7
+
+=== ROUND 1 ===
+
+toi numbers: none
+toi draws: +6
+
+la numbers: none
+la draws: Number 10
+
+toi numbers: none
+toi draws: Number 5
+
+la numbers: 10
+la draws: FLIP_THREE
+la must draw THREE cards
+la draws: +4
+la draws: Number 8
+la draws: Number 7
+
+toi numbers: 5
+toi draws: FLIP_THREE
+toi must draw THREE cards
+toi draws: Number 6
+toi draws: Number 5
+toi ELIMINATED (duplicate 5)
+
+la numbers: 10, 8, 7
+la draws: Number 6
+
+la numbers: 10, 8, 7, 6
+la draws: Number 10
+la ELIMINATED (duplicate 10)
+toi scores 17 → TOTAL 17
+la scores 35 → TOTAL 35
+
+=== ROUND 2 ===
+
+toi numbers: none

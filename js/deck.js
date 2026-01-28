@@ -1,4 +1,4 @@
-const { Card, CardType } = require("cards");
+const { Card, CardType } = require("./cards");
 
 function shuffle(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
