@@ -31,22 +31,22 @@ go run .
 
 ### `js/`
 
-Contient des implémentations et expérimentations en JavaScript.
+Contient des implémentations des fonctions de jeu en JavaScript.
 
-Pour exécuter un fichier JavaScript :
+Pour lancer le jeu de Flip7 en JavaScript :
 
 ```bash
 cd js
-node <fichier>.js
+node index.js
 ```
 
 ---
 
 ### `elm/`
 
-Contient le code écrit en Elm.
+Contient le code écrit en Elm, mais le fichier principal est le module Main.
 
-Pour compiler le projet Elm :
+Pour compiler le module Main en Elm :
 
 ```bash
 cd elm
