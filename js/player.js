@@ -9,7 +9,9 @@ class Player {
     this.numberCards = [];
     this.modifiers = [];
     this.hasSecondChance = false;
-    this.active = true;
+    this.active = true;  // ready to resolve actions
+    this.busted = false;  // eliminated from round (by doublon or freeze)
+    
   }
 
   hasDuplicate(value) {

@@ -23,6 +23,7 @@ function drawCard(player, deck) {
       } else {
         log(`${player.name} ELIMINATED (duplicate ${card.value})`);
         player.active = false;
+        player.busted = true;
       }
       return;
     }
@@ -45,6 +46,7 @@ function resolveAction(card, player, deck) {
     case "FREEZE":
       log(`${player.name} is FROZEN`);
       player.active = false;
+      player.busted = true;
       break;
 
     case "FLIP_THREE":

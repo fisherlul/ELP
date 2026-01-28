@@ -2,6 +2,7 @@ const Player = require("./player");
 const { createDeck } = require("./deck");
 const { playRound, calculateScore, rl } = require("./game");
 const log = require("./logger");
+const fs = require("fs");
 
 async function main() {
   log("Starting Flip 7");
@@ -24,21 +25,28 @@ async function main() {
       deck = createDeck();
     }
 
-    await playRound(players, deck, round);
+    await playRound(players, deck, round);  // wait for the round to complete
 
     for (const p of players) {
-      if (p.numberCards.length > 0) {
-        const score = calculateScore(p);
-        p.totalScore += score;
-        log(`${p.name} scores ${score} → TOTAL ${p.totalScore}`);
+      if (p.busted) {
+        log(`${p.name} scores 0 (eliminated this round)`);
+        continue;
       }
+      if (p.numberCards.length === 0) continue;
+
+      const score = calculateScore(p);
+      p.totalScore += score;
+      log(`${p.name} scores ${score} → TOTAL ${p.totalScore}`);
     }
     round++;
   }
 
   players.sort((a, b) => b.totalScore - a.totalScore);
-  log(`\n🏆 WINNER: ${players[0].name} (${players[0].totalScore} pts)`);
+  log(`\n WINNER: ${players[0].name} (${players[0].totalScore} pts)`);
 
+  // clear log file
+  log("Game finished. Clearing log file.");
+  fs.writeFileSync("log.txt", "");
   rl.close();
 }
 
