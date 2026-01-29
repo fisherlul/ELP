@@ -19,7 +19,7 @@ npm install -g elm
 
 ---
 ## Compilation du projet
-Pour compiler et exécuter ce projet, va dans le dossier elm et exécute le module Main.elm
+Pour compiler et exécuter ce projet, allez dans le dossier elm et exécutez le module Main.elm
 
 ```
 cd elm
