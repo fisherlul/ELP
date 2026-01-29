@@ -3,16 +3,12 @@ module Parsing exposing (Movement(..), read)
 import Parser exposing (..)
 
 
--- 1) TYPES
-
 type Movement
     = Repeat Int (List Movement)
     | Forward Int
     | Left Int
     | Right Int
 
-
--- 2) FONCTION PUBLIQUE
 
 read : String -> Result (List DeadEnd) (List Movement)
 read input =
@@ -29,11 +25,9 @@ mainParser =
         |. end
 
 
--- 3) PARSER D’UN PROGRAMME = une liste entre crochets
-
 program : Parser (List Movement)
 program =
-    -- Utilisation de 'sequence' pour remplacer votre 'bracketList' et 'sepBy' manuel
+
     sequence
         { start = "["
         , separator = ","
@@ -44,7 +38,7 @@ program =
         }
 
 
--- 4) PARSER D’UN MOUVEMENT (récursif)
+-- PARSER D’UN MOUVEMENT (récursif)
 
 movement : Parser Movement
 movement =
@@ -58,7 +52,7 @@ movement =
                 ]
 
 
--- 5) PARSERS DES CONSTRUCTEURS
+-- PARSERS DES CONSTRUCTEURS
 
 repeatP : Parser Movement
 repeatP =
@@ -91,4 +85,5 @@ rightP =
     succeed Right
         |. keyword "Right"
         |. spaces
+
         |= int
