@@ -12,12 +12,12 @@ import Svg
 
 -- MODEL
 type alias Model =
-    { inputContent : String
-    , program : Maybe (List Parsing.Movement)
-    , error : Maybe String
+    { inputContent : String                 -- Contenu tapé par l’utilisateur
+    , program : Maybe (List Parsing.Movement) -- Programme analysé (AST) ou Nothing
+    , error : Maybe String                  -- Message d’erreur éventuel
     }
 
-
+-- Etat initial du modèle
 init : Model
 init =
     { inputContent = ""
@@ -27,17 +27,19 @@ init =
 
 
 -- UPDATE
-type Msg
-    = UserTyped String
-    | Draw
+type Msg  -- les actions possibles
+    = UserTyped String  -- l’utilisateur a tapé du texte
+    | Draw         -- l’utilisateur a cliqué sur "Render Turtle"
 
 
 update : Msg -> Model -> Model
 update msg model =
     case msg of
+        -- Mise à jour du contenu tapé 
         UserTyped val ->
             { model | inputContent = val }
 
+        -- Lancement du parsing et dessin
         Draw ->
             case Parsing.read model.inputContent of
                 Ok ast ->
@@ -47,7 +49,7 @@ update msg model =
                     { model | error = Just "Invalid TcTurtle Code", program = Nothing }
 
 
--- VIEW
+-- VIEW (interface graphique en HTML)
 view : Model -> Html Msg
 view model =
     div []
@@ -73,7 +75,7 @@ view model =
             ]
         ]
 
-
+-- AFFICHAGE DES ERREURS
 renderError : Maybe String -> Html msg
 renderError maybeErr =
     case maybeErr of
@@ -87,4 +89,7 @@ renderError maybeErr =
 -- MAIN
 main : Program () Model Msg
 main =
+    -- Browser.sandbox est suffisant car :
+    -- - Pas de requêtes HTTP
+    -- - Pas d’effets externeS
     Browser.sandbox { init = init, update = update, view = view }
