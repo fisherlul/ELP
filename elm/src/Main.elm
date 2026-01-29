@@ -71,9 +71,10 @@ view model =
 
                 Nothing ->
                     div [ style "padding" "50px", style "color" "#999" ]
-                        [ text "Enter a program and click Run to see the turtle move!" ]
+                        [ text "Enter a program and click Run !" ]
             ]
         ]
+
 
 -- AFFICHAGE DES ERREURS
 renderError : Maybe String -> Html msg
